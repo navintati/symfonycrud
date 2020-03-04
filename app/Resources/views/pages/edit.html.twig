@@ -1,1 +1,11 @@
-<h1> Edit Posts </h1>
+{{ include('pages/inc/header.html.twig') }}
+<br />
+<a href="{{ absolute_url(asset('')) }}app_dev.php/post" class="btn btn-primary btn-lg" style="float: right;" title="Create Post"> Back </a>
+<br /><br /><h1> Update Posts </h1>
+
+{{ form_start(form) }}
+{{ form_widget(form) }}
+{{ form_end(form) }}
+
+{{ include('pages/inc/footer.html.twig') }}
+

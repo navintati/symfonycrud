@@ -12,7 +12,7 @@
         	<div class="container-fluid">
                 
                 <div class="navbar-header">
-                  <a class="navbar-brand" href="#">Symfony 3 </a>
+                  <a class="navbar-brand" href="{{ absolute_url(asset('')) }}app_dev.php/post">Symfony 3 </a>
                 </div>
                  
                 <div class="collapse navbar-collapse" id="navbarColor02">
@@ -22,4 +22,8 @@
         	</div>
 
         </nav>
-        <div class="container">
+        <div class="container-fluid">
+        <br />
+        {% for success_message in app.session.flashbag.get('message') %}
+          <div class="alert alert-success"> {{ success_message }} </div>
+        {% endfor %}

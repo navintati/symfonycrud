@@ -1,1 +1,15 @@
-<h1> View Posts </h1>
+{{ include('pages/inc/header.html.twig') }}
+<br />
+<!-- <a href="{{ absolute_url(asset('')) }}app_dev.php/create" class="btn btn-primary btn-xs" style="float: right; margin-right: 100px" title="Create Post"> View Post </a> -->
+<br /><br />
+
+    <div class="list-group">
+        <a href="#" class="list-group-item active"> POST </a>
+        <p class="list-group-item">{{ post.id }}</p>
+        <p class="list-group-item">{{ post.title }}</p>
+        <p class="list-group-item">{{ post.description }}</p>
+        <p class="list-group-item">{{ post.category }}</p>
+        <p class="list-group-item"><a href="{{ absolute_url(asset('')) }}app_dev.php/post" class="btn btn-primary">Back</a></p>
+    </div>
+
+{{ include('pages/inc/footer.html.twig') }}
